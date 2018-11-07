@@ -3,4 +3,9 @@
 	version: 1.3.0
 	date: 2018.09.12
 	url: https://github.com/apache/incubator-mxnet/releases
+2. OpenBLAS:
+	commit: fd8d186
+	version: 0.3.3
+	date: 2018.08.31
+	url: https://github.com/xianyi/OpenBLAS/releases
 
