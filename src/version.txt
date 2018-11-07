@@ -1,0 +1,6 @@
+1. mxnet:
+	commit: b3be92f
+	version: 1.3.0
+	date: 2018.09.12
+	url: https://github.com/apache/incubator-mxnet/releases
+
