@@ -1,0 +1,12 @@
+/doc/
+/lib/
+/obj/
+*.sdf
+*.suo
+*.opensdf
+/test_data/
+*.pdb
+/prj/linux_cmake_ThirdPartyLibrary_Test/build/
+/prj/linux_cmake_ThirdPartyLibrary_Test/test_data
+
+
