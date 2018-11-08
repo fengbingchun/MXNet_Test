@@ -8,4 +8,24 @@
 	version: 0.3.3
 	date: 2018.08.31
 	url: https://github.com/xianyi/OpenBLAS/releases
+3. dmlc-core:
+	commit: 85c1180
+	version: 0.3
+	date: 2018.07.18
+	url: https://github.com/dmlc/dmlc-core/releases
+4. mshadow:
+	commit: 2e3a895
+	version: master
+	date: 2018.11.08
+	url: https://github.com/dmlc/mshadow
+5. tvm:
+	commit: 60769b7
+	version: 0.4
+	date: 2018.09.04
+	url: https://github.com/dmlc/tvm/releases
+6. dlpack:
+	commit: bee4d1d
+	version: master
+	date: 2018.08.24
+	url: https://github.com/dmlc/dlpack
 
