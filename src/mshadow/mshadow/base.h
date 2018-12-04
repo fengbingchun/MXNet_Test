@@ -71,6 +71,11 @@ typedef unsigned __int64 uint64_t;
   #define MSHADOW_USE_CUDA  0
 #endif
 
+// fengbingchun modify: only define cblas
+#define MSHADOW_USE_CBLAS 1
+#define MSHADOW_USE_MKL   0
+#define MSHADOW_USE_CUDA  0
+
 /*!
  * \brief force user to use GPU stream during computation
  *  error will be shot when default stream NULL is used

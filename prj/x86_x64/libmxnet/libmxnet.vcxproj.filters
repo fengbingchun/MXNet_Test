@@ -1,0 +1,747 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="源文件\src">
+      <UniqueIdentifier>{001a026b-efc2-45f3-98b9-de3c98d3b219}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\src\c_api">
+      <UniqueIdentifier>{0c458d25-1e64-479d-a751-7038bc2796fa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\src\common">
+      <UniqueIdentifier>{38368773-9c17-49ee-86ea-cfd40502c810}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\src\engine">
+      <UniqueIdentifier>{80b1c083-abd8-45e3-91d7-40bd3368295a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\src\executor">
+      <UniqueIdentifier>{e4765cd8-d266-4b93-af9f-34b0ff805ad2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\src\imperative">
+      <UniqueIdentifier>{ea3b4ed3-7fc8-4cdb-8f4e-0a1e4dac5340}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\src\io">
+      <UniqueIdentifier>{6943acbb-1591-45e0-af81-ebaacc809b08}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\src\kvstore">
+      <UniqueIdentifier>{6a6d1a1e-70c9-43e4-b15b-e82a49f4094d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\src\ndarray">
+      <UniqueIdentifier>{a76d76bc-4039-4211-9af0-1af041123cdf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\src\nnvm">
+      <UniqueIdentifier>{0437c2a8-4861-4a6a-a430-bb0804d69717}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\src\operator">
+      <UniqueIdentifier>{4b151679-00e7-4326-9e06-7f01fc6e12f0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\src\profiler">
+      <UniqueIdentifier>{69552c24-6703-4349-9817-e642b7ea9ae0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\src\storage">
+      <UniqueIdentifier>{4040c710-7c1d-42d6-aabf-5736210b6aeb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\3rdparty">
+      <UniqueIdentifier>{b7e8acd9-8be0-4cb1-8d44-d7620ae7f818}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\3rdparty\tvm">
+      <UniqueIdentifier>{ea612be1-88fe-4822-8e05-8bd0450d8ffa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\3rdparty\tvm\nnvm">
+      <UniqueIdentifier>{4c317eae-46b7-47f7-b34f-4379c23d83d3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\3rdparty\tvm\nnvm\src">
+      <UniqueIdentifier>{9e630f70-4403-4fbb-8bdf-e9b069f867ba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\3rdparty\tvm\nnvm\src\c_api">
+      <UniqueIdentifier>{44e55b1f-89c9-4885-bc76-b87d25edeaec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\3rdparty\tvm\nnvm\src\core">
+      <UniqueIdentifier>{d9569a81-cc45-461d-9bf9-2b9491f886d6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\3rdparty\tvm\nnvm\src\pass">
+      <UniqueIdentifier>{2756de92-0445-4381-b33c-42d52a37b991}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\src\operator\contrib">
+      <UniqueIdentifier>{f25f5c7f-72a4-4df5-b06e-887083b1e979}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\src\operator\custom">
+      <UniqueIdentifier>{ebe9891e-a504-44e8-8b0a-e5ae864415f5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\src\operator\image">
+      <UniqueIdentifier>{885a3269-af4d-4abc-af28-acbdaa80c495}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\src\operator\nn">
+      <UniqueIdentifier>{a0412a99-e68e-41bf-b795-5f309ba7ca4d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\src\operator\nnpack">
+      <UniqueIdentifier>{7fc9d275-162c-4fb7-806a-49328a13ccf2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\src\operator\quantization">
+      <UniqueIdentifier>{05c2868a-788b-444d-8794-15900e0c1482}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\src\operator\random">
+      <UniqueIdentifier>{4b78a85f-3294-4dc2-bd27-d4a0b3f75cdb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\src\operator\subgraph">
+      <UniqueIdentifier>{0d58f650-979e-4128-abb6-3f6886041948}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\src\operator\tensor">
+      <UniqueIdentifier>{e0b53bd7-615f-486d-8da8-a6b173690501}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\src\operator\nn\cudnn">
+      <UniqueIdentifier>{a690a23a-cfda-44b3-9161-8a0d3f28d86b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\src\operator\nn\mkldnn">
+      <UniqueIdentifier>{9b6338fe-a0ca-4a64-a6c3-b28bcfe39001}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\src\mxnet\include\mxnet\base.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\mxnet\include\mxnet\c_api.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\mxnet\include\mxnet\c_predict_api.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\mxnet\include\mxnet\engine.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\mxnet\include\mxnet\executor.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\mxnet\include\mxnet\graph_attr_types.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\mxnet\include\mxnet\imperative.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\mxnet\include\mxnet\io.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\mxnet\include\mxnet\kvstore.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\mxnet\include\mxnet\ndarray.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\mxnet\include\mxnet\op_attr_types.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\mxnet\include\mxnet\operator.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\mxnet\include\mxnet\operator_util.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\mxnet\include\mxnet\resource.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\mxnet\include\mxnet\rtc.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\mxnet\include\mxnet\storage.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\mxnet\include\mxnet\tensor_blob.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\src\tvm\nnvm\src\c_api\c_api_graph.cc">
+      <Filter>源文件\3rdparty\tvm\nnvm\src\c_api</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\tvm\nnvm\src\core\graph.cc">
+      <Filter>源文件\3rdparty\tvm\nnvm\src\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\tvm\nnvm\src\core\node.cc">
+      <Filter>源文件\3rdparty\tvm\nnvm\src\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\tvm\nnvm\src\core\op.cc">
+      <Filter>源文件\3rdparty\tvm\nnvm\src\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\tvm\nnvm\src\core\pass.cc">
+      <Filter>源文件\3rdparty\tvm\nnvm\src\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\tvm\nnvm\src\core\symbolic.cc">
+      <Filter>源文件\3rdparty\tvm\nnvm\src\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\tvm\nnvm\src\pass\correct_layout.cc">
+      <Filter>源文件\3rdparty\tvm\nnvm\src\pass</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\tvm\nnvm\src\pass\gradient.cc">
+      <Filter>源文件\3rdparty\tvm\nnvm\src\pass</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\tvm\nnvm\src\pass\infer_shape_type.cc">
+      <Filter>源文件\3rdparty\tvm\nnvm\src\pass</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\tvm\nnvm\src\pass\order_mutation.cc">
+      <Filter>源文件\3rdparty\tvm\nnvm\src\pass</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\tvm\nnvm\src\pass\place_device.cc">
+      <Filter>源文件\3rdparty\tvm\nnvm\src\pass</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\tvm\nnvm\src\pass\plan_memory.cc">
+      <Filter>源文件\3rdparty\tvm\nnvm\src\pass</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\tvm\nnvm\src\pass\print_graph_ir.cc">
+      <Filter>源文件\3rdparty\tvm\nnvm\src\pass</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\tvm\nnvm\src\pass\saveload_json.cc">
+      <Filter>源文件\3rdparty\tvm\nnvm\src\pass</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\c_api\c_api.cc">
+      <Filter>源文件\src\c_api</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\c_api\c_api_error.cc">
+      <Filter>源文件\src\c_api</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\c_api\c_api_executor.cc">
+      <Filter>源文件\src\c_api</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\c_api\c_api_function.cc">
+      <Filter>源文件\src\c_api</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\c_api\c_api_ndarray.cc">
+      <Filter>源文件\src\c_api</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\c_api\c_api_profile.cc">
+      <Filter>源文件\src\c_api</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\c_api\c_api_symbolic.cc">
+      <Filter>源文件\src\c_api</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\c_api\c_predict_api.cc">
+      <Filter>源文件\src\c_api</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\common\rtc.cc">
+      <Filter>源文件\src\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\common\utils.cc">
+      <Filter>源文件\src\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\engine\engine.cc">
+      <Filter>源文件\src\engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\engine\naive_engine.cc">
+      <Filter>源文件\src\engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\engine\openmp.cc">
+      <Filter>源文件\src\engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\engine\threaded_engine.cc">
+      <Filter>源文件\src\engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\engine\threaded_engine_perdevice.cc">
+      <Filter>源文件\src\engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\engine\threaded_engine_pooled.cc">
+      <Filter>源文件\src\engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\executor\attach_op_execs_pass.cc">
+      <Filter>源文件\src\executor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\executor\attach_op_resource_pass.cc">
+      <Filter>源文件\src\executor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\executor\graph_executor.cc">
+      <Filter>源文件\src\executor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\executor\infer_graph_attr_pass.cc">
+      <Filter>源文件\src\executor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\executor\inplace_addto_detect_pass.cc">
+      <Filter>源文件\src\executor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\executor\onnx_to_tensorrt.cc">
+      <Filter>源文件\src\executor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\executor\tensorrt_pass.cc">
+      <Filter>源文件\src\executor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\executor\trt_graph_executor.cc">
+      <Filter>源文件\src\executor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\imperative\cached_op.cc">
+      <Filter>源文件\src\imperative</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\imperative\imperative.cc">
+      <Filter>源文件\src\imperative</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\imperative\imperative_utils.cc">
+      <Filter>源文件\src\imperative</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\io\image_aug_default.cc">
+      <Filter>源文件\src\io</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\io\image_det_aug_default.cc">
+      <Filter>源文件\src\io</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\io\image_io.cc">
+      <Filter>源文件\src\io</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\io\io.cc">
+      <Filter>源文件\src\io</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\io\iter_csv.cc">
+      <Filter>源文件\src\io</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\io\iter_image_det_recordio.cc">
+      <Filter>源文件\src\io</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\io\iter_image_recordio.cc">
+      <Filter>源文件\src\io</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\io\iter_image_recordio_2.cc">
+      <Filter>源文件\src\io</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\io\iter_libsvm.cc">
+      <Filter>源文件\src\io</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\io\iter_mnist.cc">
+      <Filter>源文件\src\io</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\kvstore\gradient_compression.cc">
+      <Filter>源文件\src\kvstore</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\kvstore\kvstore.cc">
+      <Filter>源文件\src\kvstore</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\kvstore\kvstore_utils.cc">
+      <Filter>源文件\src\kvstore</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\ndarray\ndarray.cc">
+      <Filter>源文件\src\ndarray</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\ndarray\ndarray_function.cc">
+      <Filter>源文件\src\ndarray</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\nnvm\graph_editor.cc">
+      <Filter>源文件\src\nnvm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\nnvm\legacy_json_util.cc">
+      <Filter>源文件\src\nnvm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\nnvm\legacy_op_util.cc">
+      <Filter>源文件\src\nnvm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\nnvm\tvm_bridge.cc">
+      <Filter>源文件\src\nnvm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\batch_norm_v1.cc">
+      <Filter>源文件\src\operator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\bilinear_sampler.cc">
+      <Filter>源文件\src\operator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\control_flow.cc">
+      <Filter>源文件\src\operator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\convolution_v1.cc">
+      <Filter>源文件\src\operator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\correlation.cc">
+      <Filter>源文件\src\operator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\crop.cc">
+      <Filter>源文件\src\operator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\cross_device_copy.cc">
+      <Filter>源文件\src\operator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\grid_generator.cc">
+      <Filter>源文件\src\operator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\identity_attach_KL_sparse_reg.cc">
+      <Filter>源文件\src\operator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\instance_norm.cc">
+      <Filter>源文件\src\operator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\l2_normalization.cc">
+      <Filter>源文件\src\operator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\leaky_relu.cc">
+      <Filter>源文件\src\operator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\loss_binary_op.cc">
+      <Filter>源文件\src\operator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\make_loss.cc">
+      <Filter>源文件\src\operator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\operator.cc">
+      <Filter>源文件\src\operator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\operator_tune.cc">
+      <Filter>源文件\src\operator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\operator_util.cc">
+      <Filter>源文件\src\operator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\optimizer_op.cc">
+      <Filter>源文件\src\operator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\pad.cc">
+      <Filter>源文件\src\operator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\pooling_v1.cc">
+      <Filter>源文件\src\operator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\regression_output.cc">
+      <Filter>源文件\src\operator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\rnn.cc">
+      <Filter>源文件\src\operator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\roi_pooling.cc">
+      <Filter>源文件\src\operator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\sequence_last.cc">
+      <Filter>源文件\src\operator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\sequence_mask.cc">
+      <Filter>源文件\src\operator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\sequence_reverse.cc">
+      <Filter>源文件\src\operator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\slice_channel.cc">
+      <Filter>源文件\src\operator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\softmax_output.cc">
+      <Filter>源文件\src\operator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\spatial_transformer.cc">
+      <Filter>源文件\src\operator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\subgraph_op_common.cc">
+      <Filter>源文件\src\operator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\svm_output.cc">
+      <Filter>源文件\src\operator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\swapaxis.cc">
+      <Filter>源文件\src\operator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\contrib\adaptive_avg_pooling.cc">
+      <Filter>源文件\src\operator\contrib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\contrib\bilinear_resize.cc">
+      <Filter>源文件\src\operator\contrib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\contrib\bounding_box.cc">
+      <Filter>源文件\src\operator\contrib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\contrib\count_sketch.cc">
+      <Filter>源文件\src\operator\contrib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\contrib\ctc_loss.cc">
+      <Filter>源文件\src\operator\contrib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\contrib\deformable_convolution.cc">
+      <Filter>源文件\src\operator\contrib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\contrib\deformable_psroi_pooling.cc">
+      <Filter>源文件\src\operator\contrib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\contrib\fft.cc">
+      <Filter>源文件\src\operator\contrib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\contrib\ifft.cc">
+      <Filter>源文件\src\operator\contrib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\contrib\krprod.cc">
+      <Filter>源文件\src\operator\contrib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\contrib\multi_proposal.cc">
+      <Filter>源文件\src\operator\contrib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\contrib\multibox_detection.cc">
+      <Filter>源文件\src\operator\contrib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\contrib\multibox_prior.cc">
+      <Filter>源文件\src\operator\contrib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\contrib\multibox_target.cc">
+      <Filter>源文件\src\operator\contrib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\contrib\nnvm_to_onnx.cc">
+      <Filter>源文件\src\operator\contrib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\contrib\proposal.cc">
+      <Filter>源文件\src\operator\contrib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\contrib\psroi_pooling.cc">
+      <Filter>源文件\src\operator\contrib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\contrib\quadratic_op.cc">
+      <Filter>源文件\src\operator\contrib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\contrib\roi_align.cc">
+      <Filter>源文件\src\operator\contrib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\contrib\sync_batch_norm.cc">
+      <Filter>源文件\src\operator\contrib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\contrib\tensorrt.cc">
+      <Filter>源文件\src\operator\contrib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\contrib\transformer.cc">
+      <Filter>源文件\src\operator\contrib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\custom\custom.cc">
+      <Filter>源文件\src\operator\custom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\custom\native_op.cc">
+      <Filter>源文件\src\operator\custom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\custom\ndarray_op.cc">
+      <Filter>源文件\src\operator\custom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\image\image_random.cc">
+      <Filter>源文件\src\operator\image</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\tensor\broadcast_reduce_op_index.cc">
+      <Filter>源文件\src\operator\tensor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\tensor\broadcast_reduce_op_value.cc">
+      <Filter>源文件\src\operator\tensor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\tensor\cast_storage.cc">
+      <Filter>源文件\src\operator\tensor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\tensor\control_flow_op.cc">
+      <Filter>源文件\src\operator\tensor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\tensor\diag_op.cc">
+      <Filter>源文件\src\operator\tensor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\tensor\dot.cc">
+      <Filter>源文件\src\operator\tensor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\tensor\elemwise_binary_broadcast_op_basic.cc">
+      <Filter>源文件\src\operator\tensor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\tensor\elemwise_binary_broadcast_op_extended.cc">
+      <Filter>源文件\src\operator\tensor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\tensor\elemwise_binary_broadcast_op_logic.cc">
+      <Filter>源文件\src\operator\tensor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\tensor\elemwise_binary_op.cc">
+      <Filter>源文件\src\operator\tensor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\tensor\elemwise_binary_op_basic.cc">
+      <Filter>源文件\src\operator\tensor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\tensor\elemwise_binary_op_extended.cc">
+      <Filter>源文件\src\operator\tensor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\tensor\elemwise_binary_op_logic.cc">
+      <Filter>源文件\src\operator\tensor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\tensor\elemwise_binary_scalar_op_basic.cc">
+      <Filter>源文件\src\operator\tensor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\tensor\elemwise_binary_scalar_op_extended.cc">
+      <Filter>源文件\src\operator\tensor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\tensor\elemwise_binary_scalar_op_logic.cc">
+      <Filter>源文件\src\operator\tensor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\tensor\elemwise_scatter_op.cc">
+      <Filter>源文件\src\operator\tensor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\tensor\elemwise_sum.cc">
+      <Filter>源文件\src\operator\tensor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\tensor\elemwise_unary_op_basic.cc">
+      <Filter>源文件\src\operator\tensor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\tensor\elemwise_unary_op_trig.cc">
+      <Filter>源文件\src\operator\tensor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\tensor\histogram.cc">
+      <Filter>源文件\src\operator\tensor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\tensor\indexing_op.cc">
+      <Filter>源文件\src\operator\tensor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\tensor\init_op.cc">
+      <Filter>源文件\src\operator\tensor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\tensor\la_op.cc">
+      <Filter>源文件\src\operator\tensor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\tensor\matrix_op.cc">
+      <Filter>源文件\src\operator\tensor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\tensor\ordering_op.cc">
+      <Filter>源文件\src\operator\tensor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\tensor\ravel.cc">
+      <Filter>源文件\src\operator\tensor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\tensor\sparse_retain.cc">
+      <Filter>源文件\src\operator\tensor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\tensor\square_sum.cc">
+      <Filter>源文件\src\operator\tensor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\random\multisample_op.cc">
+      <Filter>源文件\src\operator\random</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\random\sample_multinomial_op.cc">
+      <Filter>源文件\src\operator\random</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\random\sample_op.cc">
+      <Filter>源文件\src\operator\random</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\random\shuffle_op.cc">
+      <Filter>源文件\src\operator\random</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\random\unique_sample_op.cc">
+      <Filter>源文件\src\operator\random</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\quantization\dequantize.cc">
+      <Filter>源文件\src\operator\quantization</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\quantization\quantize.cc">
+      <Filter>源文件\src\operator\quantization</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\quantization\quantize_graph_pass.cc">
+      <Filter>源文件\src\operator\quantization</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\quantization\quantized_conv.cc">
+      <Filter>源文件\src\operator\quantization</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\quantization\quantized_flatten.cc">
+      <Filter>源文件\src\operator\quantization</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\quantization\quantized_fully_connected.cc">
+      <Filter>源文件\src\operator\quantization</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\quantization\quantized_pooling.cc">
+      <Filter>源文件\src\operator\quantization</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\quantization\requantize.cc">
+      <Filter>源文件\src\operator\quantization</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\nnpack\nnpack_util.cc">
+      <Filter>源文件\src\operator\nnpack</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\nn\upsampling.cc">
+      <Filter>源文件\src\operator\nn</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\nn\softmax_activation.cc">
+      <Filter>源文件\src\operator\nn</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\nn\softmax.cc">
+      <Filter>源文件\src\operator\nn</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\nn\pooling.cc">
+      <Filter>源文件\src\operator\nn</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\nn\lrn.cc">
+      <Filter>源文件\src\operator\nn</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\nn\layer_norm.cc">
+      <Filter>源文件\src\operator\nn</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\nn\fully_connected.cc">
+      <Filter>源文件\src\operator\nn</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\nn\dropout.cc">
+      <Filter>源文件\src\operator\nn</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\nn\deconvolution.cc">
+      <Filter>源文件\src\operator\nn</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\nn\convolution.cc">
+      <Filter>源文件\src\operator\nn</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\nn\concat.cc">
+      <Filter>源文件\src\operator\nn</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\nn\batch_norm.cc">
+      <Filter>源文件\src\operator\nn</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\nn\activation.cc">
+      <Filter>源文件\src\operator\nn</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\nn\cudnn\cudnn_algoreg.cc">
+      <Filter>源文件\src\operator\nn\cudnn</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\nn\cudnn\cudnn_batch_norm.cc">
+      <Filter>源文件\src\operator\nn\cudnn</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\nn\mkldnn\mkldnn_act.cc">
+      <Filter>源文件\src\operator\nn\mkldnn</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\nn\mkldnn\mkldnn_base.cc">
+      <Filter>源文件\src\operator\nn\mkldnn</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\nn\mkldnn\mkldnn_concat.cc">
+      <Filter>源文件\src\operator\nn\mkldnn</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\nn\mkldnn\mkldnn_convolution.cc">
+      <Filter>源文件\src\operator\nn\mkldnn</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\nn\mkldnn\mkldnn_copy.cc">
+      <Filter>源文件\src\operator\nn\mkldnn</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\nn\mkldnn\mkldnn_deconvolution.cc">
+      <Filter>源文件\src\operator\nn\mkldnn</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\nn\mkldnn\mkldnn_fully_connected.cc">
+      <Filter>源文件\src\operator\nn\mkldnn</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\nn\mkldnn\mkldnn_pooling.cc">
+      <Filter>源文件\src\operator\nn\mkldnn</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\nn\mkldnn\mkldnn_softmax.cc">
+      <Filter>源文件\src\operator\nn\mkldnn</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\nn\mkldnn\mkldnn_sum.cc">
+      <Filter>源文件\src\operator\nn\mkldnn</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\profiler\aggregate_stats.cc">
+      <Filter>源文件\src\profiler</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\profiler\profiler.cc">
+      <Filter>源文件\src\profiler</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\profiler\vtune.cc">
+      <Filter>源文件\src\profiler</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\storage\storage.cc">
+      <Filter>源文件\src\storage</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\initialize.cc">
+      <Filter>源文件\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mxnet\src\resource.cc">
+      <Filter>源文件\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\tvm\nnvm\src\c_api\c_api_error_.cc">
+      <Filter>源文件\3rdparty\tvm\nnvm\src\c_api</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\tvm\nnvm\src\c_api\c_api_symbolic_.cc">
+      <Filter>源文件\3rdparty\tvm\nnvm\src\c_api</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

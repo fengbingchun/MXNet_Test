@@ -84,8 +84,8 @@ extern "C" {
       void func##_(char* uplo, int* n, dtype* a, int* lda, int *info);
   #endif
 
-  MXNET_LAPACK_FSIGNATURE1(spotrf, float)
-  MXNET_LAPACK_FSIGNATURE1(dpotrf, double)
+  //MXNET_LAPACK_FSIGNATURE1(spotrf, float) // fengbingchun modify: fix error 2556
+  //MXNET_LAPACK_FSIGNATURE1(dpotrf, double) // fengbingchun modify: fix error 2556
   MXNET_LAPACK_FSIGNATURE1(spotri, float)
   MXNET_LAPACK_FSIGNATURE1(dpotri, double)
 

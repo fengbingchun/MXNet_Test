@@ -33,6 +33,11 @@
 #include "../mshadow_op.h"
 #include "../operator_common.h"
 
+// fengbingchun modify: fix error c2144
+#ifdef small
+#undef small
+#endif
+
 namespace mxnet {
 namespace op {
 namespace broadcast {

@@ -239,7 +239,7 @@ std::vector<nnvm::NodeEntry> Gradient(
 
   std::vector<nnvm::NodeEntry> ret;
   for (index_t i = 0; i < params.num_args; ++i) {
-    ret.emplace_back(nnvm::NodeEntry{g, i, 0});
+    ret.emplace_back(nnvm::NodeEntry{g, (uint32_t)i, 0}); // fengbingchun modify: error c2397
   }
   if (params.num_auxs) {
     nnvm::NodePtr ng = nnvm::Node::Create();

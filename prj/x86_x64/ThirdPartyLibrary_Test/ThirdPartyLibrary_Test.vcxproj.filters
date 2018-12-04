@@ -18,12 +18,24 @@
     <ClInclude Include="..\..\..\demo\ThirdPartyLibrary_Test\openblas_test.hpp">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\..\demo\ThirdPartyLibrary_Test\mshadow_test.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\demo\ThirdPartyLibrary_Test\dmlc_test.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\demo\ThirdPartyLibrary_Test\openblas_test.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\demo\ThirdPartyLibrary_Test\ThirdPartyLibrary_Test.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\demo\ThirdPartyLibrary_Test\mshadow_test.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\demo\ThirdPartyLibrary_Test\dmlc_test.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

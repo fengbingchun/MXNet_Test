@@ -340,7 +340,7 @@ class ConvolutionV1Op : public Operator {
             static_cast<index_t>(
                 param_.workspace / (shape_colunit_.Size() + shape_dstunit_.Size())),
             ishape[0]),
-        1U);
+        (index_t)1U); // fengbingchun modify: error c2672
 
     mshadow::Shape<2> scol = mshadow::Shape2(shape_colunit_[0],
                                              shape_colunit_[1] * nstep_);

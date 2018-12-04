@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\src\mxnet\include\mxnet\base.h" />
+    <ClInclude Include="..\..\..\src\mxnet\include\mxnet\c_api.h" />
+    <ClInclude Include="..\..\..\src\mxnet\include\mxnet\c_predict_api.h" />
+    <ClInclude Include="..\..\..\src\mxnet\include\mxnet\engine.h" />
+    <ClInclude Include="..\..\..\src\mxnet\include\mxnet\executor.h" />
+    <ClInclude Include="..\..\..\src\mxnet\include\mxnet\graph_attr_types.h" />
+    <ClInclude Include="..\..\..\src\mxnet\include\mxnet\imperative.h" />
+    <ClInclude Include="..\..\..\src\mxnet\include\mxnet\io.h" />
+    <ClInclude Include="..\..\..\src\mxnet\include\mxnet\kvstore.h" />
+    <ClInclude Include="..\..\..\src\mxnet\include\mxnet\ndarray.h" />
+    <ClInclude Include="..\..\..\src\mxnet\include\mxnet\operator.h" />
+    <ClInclude Include="..\..\..\src\mxnet\include\mxnet\operator_util.h" />
+    <ClInclude Include="..\..\..\src\mxnet\include\mxnet\op_attr_types.h" />
+    <ClInclude Include="..\..\..\src\mxnet\include\mxnet\resource.h" />
+    <ClInclude Include="..\..\..\src\mxnet\include\mxnet\rtc.h" />
+    <ClInclude Include="..\..\..\src\mxnet\include\mxnet\storage.h" />
+    <ClInclude Include="..\..\..\src\mxnet\include\mxnet\tensor_blob.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\src\mxnet\src\common\rtc.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\common\utils.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\c_api\c_api.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\c_api\c_api_error.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\c_api\c_api_executor.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\c_api\c_api_function.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\c_api\c_api_ndarray.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\c_api\c_api_profile.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\c_api\c_api_symbolic.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\c_api\c_predict_api.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\engine\engine.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\engine\naive_engine.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\engine\openmp.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\engine\threaded_engine.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\engine\threaded_engine_perdevice.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\engine\threaded_engine_pooled.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\executor\attach_op_execs_pass.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\executor\attach_op_resource_pass.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\executor\graph_executor.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\executor\infer_graph_attr_pass.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\executor\inplace_addto_detect_pass.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\executor\onnx_to_tensorrt.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\executor\tensorrt_pass.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\executor\trt_graph_executor.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\imperative\cached_op.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\imperative\imperative.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\imperative\imperative_utils.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\initialize.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\io\image_aug_default.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\io\image_det_aug_default.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\io\image_io.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\io\io.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\io\iter_csv.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\io\iter_image_det_recordio.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\io\iter_image_recordio.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\io\iter_image_recordio_2.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\io\iter_libsvm.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\io\iter_mnist.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\kvstore\gradient_compression.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\kvstore\kvstore.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\kvstore\kvstore_utils.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\ndarray\ndarray.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\ndarray\ndarray_function.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\nnvm\graph_editor.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\nnvm\legacy_json_util.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\nnvm\legacy_op_util.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\nnvm\tvm_bridge.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\batch_norm_v1.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\bilinear_sampler.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\contrib\adaptive_avg_pooling.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\contrib\bilinear_resize.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\contrib\bounding_box.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\contrib\count_sketch.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\contrib\ctc_loss.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\contrib\deformable_convolution.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\contrib\deformable_psroi_pooling.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\contrib\fft.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\contrib\ifft.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\contrib\krprod.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\contrib\multibox_detection.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\contrib\multibox_prior.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\contrib\multibox_target.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\contrib\multi_proposal.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\contrib\nnvm_to_onnx.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\contrib\proposal.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\contrib\psroi_pooling.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\contrib\quadratic_op.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\contrib\roi_align.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\contrib\sync_batch_norm.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\contrib\tensorrt.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\contrib\transformer.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\control_flow.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\convolution_v1.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\correlation.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\crop.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\cross_device_copy.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\custom\custom.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\custom\native_op.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\custom\ndarray_op.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\grid_generator.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\identity_attach_KL_sparse_reg.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\image\image_random.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\instance_norm.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\l2_normalization.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\leaky_relu.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\loss_binary_op.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\make_loss.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\nnpack\nnpack_util.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\nn\activation.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\nn\batch_norm.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\nn\concat.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\nn\convolution.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\nn\cudnn\cudnn_algoreg.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\nn\cudnn\cudnn_batch_norm.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\nn\deconvolution.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\nn\dropout.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\nn\fully_connected.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\nn\layer_norm.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\nn\lrn.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\nn\mkldnn\mkldnn_act.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\nn\mkldnn\mkldnn_base.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\nn\mkldnn\mkldnn_concat.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\nn\mkldnn\mkldnn_convolution.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\nn\mkldnn\mkldnn_copy.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\nn\mkldnn\mkldnn_deconvolution.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\nn\mkldnn\mkldnn_fully_connected.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\nn\mkldnn\mkldnn_pooling.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\nn\mkldnn\mkldnn_softmax.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\nn\mkldnn\mkldnn_sum.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\nn\pooling.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\nn\softmax.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\nn\softmax_activation.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\nn\upsampling.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\operator.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\operator_tune.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\operator_util.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\optimizer_op.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\pad.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\pooling_v1.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\quantization\dequantize.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\quantization\quantize.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\quantization\quantized_conv.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\quantization\quantized_flatten.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\quantization\quantized_fully_connected.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\quantization\quantized_pooling.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\quantization\quantize_graph_pass.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\quantization\requantize.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\random\multisample_op.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\random\sample_multinomial_op.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\random\sample_op.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\random\shuffle_op.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\random\unique_sample_op.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\regression_output.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\rnn.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\roi_pooling.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\sequence_last.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\sequence_mask.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\sequence_reverse.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\slice_channel.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\softmax_output.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\spatial_transformer.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\subgraph_op_common.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\svm_output.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\swapaxis.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\tensor\broadcast_reduce_op_index.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\tensor\broadcast_reduce_op_value.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\tensor\cast_storage.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\tensor\control_flow_op.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\tensor\diag_op.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\tensor\dot.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\tensor\elemwise_binary_broadcast_op_basic.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\tensor\elemwise_binary_broadcast_op_extended.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\tensor\elemwise_binary_broadcast_op_logic.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\tensor\elemwise_binary_op.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\tensor\elemwise_binary_op_basic.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\tensor\elemwise_binary_op_extended.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\tensor\elemwise_binary_op_logic.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\tensor\elemwise_binary_scalar_op_basic.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\tensor\elemwise_binary_scalar_op_extended.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\tensor\elemwise_binary_scalar_op_logic.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\tensor\elemwise_scatter_op.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\tensor\elemwise_sum.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\tensor\elemwise_unary_op_basic.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\tensor\elemwise_unary_op_trig.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\tensor\histogram.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\tensor\indexing_op.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\tensor\init_op.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\tensor\la_op.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\tensor\matrix_op.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\tensor\ordering_op.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\tensor\ravel.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\tensor\sparse_retain.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\operator\tensor\square_sum.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\profiler\aggregate_stats.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\profiler\profiler.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\profiler\vtune.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\resource.cc" />
+    <ClCompile Include="..\..\..\src\mxnet\src\storage\storage.cc" />
+    <ClCompile Include="..\..\..\src\tvm\nnvm\src\core\graph.cc" />
+    <ClCompile Include="..\..\..\src\tvm\nnvm\src\core\node.cc" />
+    <ClCompile Include="..\..\..\src\tvm\nnvm\src\core\op.cc" />
+    <ClCompile Include="..\..\..\src\tvm\nnvm\src\core\pass.cc" />
+    <ClCompile Include="..\..\..\src\tvm\nnvm\src\core\symbolic.cc" />
+    <ClCompile Include="..\..\..\src\tvm\nnvm\src\c_api\c_api_error_.cc" />
+    <ClCompile Include="..\..\..\src\tvm\nnvm\src\c_api\c_api_graph.cc" />
+    <ClCompile Include="..\..\..\src\tvm\nnvm\src\c_api\c_api_symbolic_.cc" />
+    <ClCompile Include="..\..\..\src\tvm\nnvm\src\pass\correct_layout.cc" />
+    <ClCompile Include="..\..\..\src\tvm\nnvm\src\pass\gradient.cc" />
+    <ClCompile Include="..\..\..\src\tvm\nnvm\src\pass\infer_shape_type.cc" />
+    <ClCompile Include="..\..\..\src\tvm\nnvm\src\pass\order_mutation.cc" />
+    <ClCompile Include="..\..\..\src\tvm\nnvm\src\pass\place_device.cc" />
+    <ClCompile Include="..\..\..\src\tvm\nnvm\src\pass\plan_memory.cc" />
+    <ClCompile Include="..\..\..\src\tvm\nnvm\src\pass\print_graph_ir.cc" />
+    <ClCompile Include="..\..\..\src\tvm\nnvm\src\pass\saveload_json.cc" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{E183458C-2B1C-48DC-BDA5-60C03418E304}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>libmxnet</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>.\../../../obj/rel/x64/libmxnet\</OutDir>
+    <IntDir>.\../../../obj/rel/x64/libmxnet\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>.\../../../obj/dbg/x64/libmxnet\</OutDir>
+    <IntDir>.\../../../obj/dbg/x64/libmxnet\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>
+      </SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;NOMINMAX;MXNET_USE_OPENCV=0;MXNET_EXPORTS;NNVM_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>.\../../../obj/rel/x64/libmxnet\libmxnet.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\../../../obj/rel/x64/libmxnet\</AssemblerListingLocation>
+      <ObjectFileName>.\../../../obj/rel/x64/libmxnet\</ObjectFileName>
+      <ProgramDataBaseFileName>.\../../../obj/rel/x64/libmxnet\</ProgramDataBaseFileName>
+      <AdditionalIncludeDirectories>E:\GitCode\MXNet_Test\src\mxnet\include;E:\GitCode\MXNet_Test\src\mxnet\src;E:\GitCode\MXNet_Test\src\mshadow;E:\GitCode\MXNet_Test\src\tvm\include;E:\GitCode\MXNet_Test\src\tvm\nnvm\include;E:\GitCode\MXNet_Test\src\dmlc-core\include;E:\GitCode\MXNet_Test\src\dlpack\include;E:\GitCode\MXNet_Test\src\openblas;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <OutputFile>../../../lib/rel/x64/libmxnet.dll</OutputFile>
+      <ImportLibrary>../../../lib/rel/x64/libmxnet.lib</ImportLibrary>
+      <AdditionalLibraryDirectories>E:\GitCode\MXNet_Test\lib\rel\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>libopenblas.lib;libdmlc.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <Bscmake>
+      <OutputFile>.\../../../obj/rel/x64/libmxnet\libmxnet.bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>
+      </SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;NOMINMAX;MXNET_USE_OPENCV=0;MXNET_EXPORTS;NNVM_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>.\../../../obj/dbg/x64/libmxnet\libmxnet.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\../../../obj/dbg/x64/libmxnet\</AssemblerListingLocation>
+      <ObjectFileName>.\../../../obj/dbg/x64/libmxnet\</ObjectFileName>
+      <ProgramDataBaseFileName>.\../../../obj/dbg/x64/libmxnet\</ProgramDataBaseFileName>
+      <AdditionalIncludeDirectories>E:\GitCode\MXNet_Test\src\mxnet\include;E:\GitCode\MXNet_Test\src\mxnet\src;E:\GitCode\MXNet_Test\src\mshadow;E:\GitCode\MXNet_Test\src\tvm\include;E:\GitCode\MXNet_Test\src\tvm\nnvm\include;E:\GitCode\MXNet_Test\src\dmlc-core\include;E:\GitCode\MXNet_Test\src\dlpack\include;E:\GitCode\MXNet_Test\src\openblas;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <OutputFile>../../../lib/dbg/x64/libmxnet.dll</OutputFile>
+      <ImportLibrary>../../../lib/dbg/x64/libmxnet.lib</ImportLibrary>
+      <AdditionalLibraryDirectories>E:\GitCode\MXNet_Test\lib\dbg\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>libopenblas.lib;libdmlc.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <Bscmake>
+      <OutputFile>.\../../../obj/dbg/x64/libmxnet\libmxnet.bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
