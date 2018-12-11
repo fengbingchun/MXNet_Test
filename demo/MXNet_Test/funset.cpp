@@ -66,11 +66,11 @@ mxnet::cpp::Symbol mlp(const std::vector<int> &layers)
 	for (size_t i = 0; i < layers.size(); ++i) {
 		weights[i] = mxnet::cpp::Symbol::Variable("w" + std::to_string(i));
 		biases[i] = mxnet::cpp::Symbol::Variable("b" + std::to_string(i));
-		mxnet::cpp::Symbol fc = FullyConnected(i == 0 ? x : outputs[i - 1], weights[i], biases[i], layers[i]);
-		outputs[i] = i == layers.size() - 1 ? fc : Activation(fc, mxnet::cpp::ActivationActType::kRelu);
+		mxnet::cpp::Symbol fc = mxnet::cpp::FullyConnected(i == 0 ? x : outputs[i - 1], weights[i], biases[i], layers[i]);
+		outputs[i] = i == layers.size() - 1 ? fc : mxnet::cpp::Activation(fc, mxnet::cpp::ActivationActType::kRelu);
 	}
 
-	return SoftmaxOutput(outputs.back(), label);
+	return mxnet::cpp::SoftmaxOutput(outputs.back(), label);
 }
 
 } // namespace
@@ -159,6 +159,11 @@ int test_mnist_train()
 		LG << "Epoch: " << iter << " " << samples / duration << " samples/sec Accuracy: " << acc.Get();
 	}
 
+	std::string json_file{ "E:/GitCode/MXNet_Test/data/mnist.json" };
+	std::string param_file{"E:/GitCode/MXNet_Test/data/mnist.params"};
+	net.Save(json_file);
+	mxnet::cpp::NDArray::Save(param_file, exec->arg_arrays);
+
 	delete exec;
 	MXNotifyShutdown();
 
@@ -167,5 +172,18 @@ int test_mnist_train()
 
 int test_mnist_predict()
 {
+	std::string json_file{ "E:/GitCode/MXNet_Test/data/mnist.json" };
+	std::string param_file{ "E:/GitCode/MXNet_Test/data/mnist.params" };
+
+	mxnet::cpp::Context ctx = mxnet::cpp::Context::cpu();  // Use CPU for predict
+
+	mxnet::cpp::Symbol net = mxnet::cpp::Symbol::Load(json_file);
+	std::vector<mxnet::cpp::NDArray> array_list;
+	mxnet::cpp::NDArray::Load(param_file, &array_list);
+	fprintf(stdout, "array size: %d\n", array_list.size());
+
+	const std::map<std::string, mxnet::cpp::NDArray> args_map;
+	//args_map["X"] = 
+
 	return 0;
 }

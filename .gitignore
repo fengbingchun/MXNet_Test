@@ -4,9 +4,8 @@
 *.sdf
 *.suo
 *.opensdf
-/test_data/
+/data/
 *.pdb
 /prj/linux_cmake_ThirdPartyLibrary_Test/build/
 /prj/linux_cmake_ThirdPartyLibrary_Test/data
 *.vs
-
