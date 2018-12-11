@@ -10,12 +10,10 @@
 	- tvm: 0.4, [GitHub](https://github.com/dmlc/tvm/releases)
 - test code include:
 	- C++
-		- MXNet's third library usage: dmlc-core°¢OpenBLAS°¢mshadow
+		- MXNet's third library usage: dmlc-core„ÄÅOpenBLAS„ÄÅmshadow
 
 **The project support platform:** 
 - windows10 64 bits: It can be directly build with VS2017 in windows10 64bits.
 
 **Windows VS Screenshot:**  
-![](https://github.com/fengbingchun/MXNet_Test/tree/master/prj/x86_x64/Screenshot.png)
-
-**Blog:** [fengbingchun](https://blog.csdn.net/fengbingchun/article/category/2628015)
+![](https://github.com/fengbingchun/MXNet_Test/blob/master/prj/x86_x64/Screenshot.png)
