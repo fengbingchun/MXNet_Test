@@ -8,4 +8,7 @@
 *.pdb
 /prj/linux_cmake_ThirdPartyLibrary_Test/build/
 /prj/linux_cmake_ThirdPartyLibrary_Test/data
+/prj/linux_cmake_MXNet_Test/build/
+/prj/linux_cmake_MXNet_Test/data
 *.vs
+/src/mxnet/cpp-package/scripts/*.so.*

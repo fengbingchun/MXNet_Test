@@ -15,7 +15,7 @@ include(cmake/Utils.cmake)
 dmlccore_option(USE_HDFS "Build with HDFS support" OFF)
 dmlccore_option(USE_AZURE "Build with AZURE support" OFF)
 dmlccore_option(USE_S3 "Build with S3 support" OFF)
-dmlccore_option(USE_OPENMP "Build with OpenMP" ON)
+dmlccore_option(USE_OPENMP "Build with OpenMP" OFF) # fengbingchun modify: close openmp support
 dmlccore_option(USE_CXX14_IF_AVAILABLE "Build with C++14 if the compiler supports it" OFF)
 
 # include path

@@ -678,7 +678,7 @@ __declspec(dllimport) int __cdecl omp_get_num_procs(void);
 #else
 #ifdef __ELF__
 int omp_in_parallel  (void) __attribute__ ((weak));
-int omp_get_num_procs(void) __attribute__ ((weak));
+//int omp_get_num_procs(void) __attribute__ ((weak)); // fengbingchun modify
 #endif
 #endif
 

@@ -84,10 +84,18 @@ int test_mnist_train()
 	const float learning_rate = 0.1;
 	const float weight_decay = 1e-2;
 
+#ifdef _MSC_VER
 	std::vector<std::string> data_files = { "E:/GitCode/MXNet_Test/data/mnist/train-images.idx3-ubyte",
-											"E:/GitCode/MXNet_Test/data/mnist/train-labels.idx1-ubyte",
-											"E:/GitCode/MXNet_Test/data/mnist/t10k-images.idx3-ubyte",
-											"E:/GitCode/MXNet_Test/data/mnist/t10k-labels.idx1-ubyte"};
+						"E:/GitCode/MXNet_Test/data/mnist/train-labels.idx1-ubyte",
+						"E:/GitCode/MXNet_Test/data/mnist/t10k-images.idx3-ubyte",
+						"E:/GitCode/MXNet_Test/data/mnist/t10k-labels.idx1-ubyte"};
+#else
+	std::vector<std::string> data_files = { "data/mnist/train-images.idx3-ubyte",
+						"data/mnist/train-labels.idx1-ubyte",
+						"data/mnist/t10k-images.idx3-ubyte",
+						"data/mnist/t10k-labels.idx1-ubyte"};
+
+#endif
 
 	auto train_iter = mxnet::cpp::MXDataIter("MNISTIter");
 	setDataIter(&train_iter, "Train", data_files, batch_size);
@@ -159,8 +167,13 @@ int test_mnist_train()
 		LG << "Epoch: " << iter << " " << samples / duration << " samples/sec Accuracy: " << acc.Get();
 	}
 
+#ifdef _MSC_VER
 	std::string json_file{ "E:/GitCode/MXNet_Test/data/mnist.json" };
 	std::string param_file{"E:/GitCode/MXNet_Test/data/mnist.params"};
+#else
+	std::string json_file{ "data/mnist.json" };
+	std::string param_file{"data/mnist.params"};
+#endif
 	net.Save(json_file);
 	mxnet::cpp::NDArray::Save(param_file, exec->arg_arrays);
 
@@ -172,8 +185,13 @@ int test_mnist_train()
 
 int test_mnist_predict()
 {
+#ifdef _MSC_VER
 	std::string json_file{ "E:/GitCode/MXNet_Test/data/mnist.json" };
 	std::string param_file{ "E:/GitCode/MXNet_Test/data/mnist.params" };
+#else
+	std::string json_file{ "E:/GitCode/MXNet_Test/data/mnist.json" };
+	std::string param_file{ "E:/GitCode/MXNet_Test/data/mnist.params" };
+#endif
 
 	mxnet::cpp::Context ctx = mxnet::cpp::Context::cpu();  // Use CPU for predict
 

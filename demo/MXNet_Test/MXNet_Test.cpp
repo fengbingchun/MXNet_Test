@@ -3,7 +3,7 @@
 
 int main()
 {
-	int ret = test_mnist_predict();
+	int ret = test_mnist_train();
 	if (ret == 0) fprintf(stdout, "====== test success ======\n");
 	else fprintf(stderr, "###### test fail ######\n");
 }
