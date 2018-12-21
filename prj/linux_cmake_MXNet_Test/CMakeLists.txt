@@ -28,13 +28,8 @@ SET(PATH_SRC_TVM_FILES ${CMAKE_CURRENT_SOURCE_DIR}/./../../src/tvm)
 SET(PATH_SRC_DLPACK_FILES ${CMAKE_CURRENT_SOURCE_DIR}/./../../src/dlpack)
 MESSAGE(STATUS "path test files: ${PATH_TEST_FILES}")
 
-# don't use opencv/openmp in mxnet
+# don't use opencv in mxnet
 ADD_DEFINITIONS(-DMXNET_USE_OPENCV=0)
-# open openmp support in dmlc-core
-#ADD_DEFINITIONS(-D_OPENMP=1)
-# open openmp support in openblas
-#ADD_DEFINITIONS(-DUSE_OPENMP=1)
-#ADD_DEFINITIONS(-D__ELF__=0)
 ADD_DEFINITIONS(-DMSHADOW_USE_F16C=0)
 
 SET(PATH_OPENCV /opt/opencv3.4.2)
@@ -105,19 +100,18 @@ MESSAGE(STATUS "test cpp list: ${TEST_CPP_LIST} ${TEST_C_LIST}")
 ADD_EXECUTABLE(MXNet_Test ${TEST_CPP_LIST} ${TEST_CC_LIST})
 # add dependent library: static and dynamic
 TARGET_LINK_LIBRARIES(MXNet_Test
-	rt
 	mxnet
 	${DEP_LIB_DIR}/libdmlc.a
 	${DEP_LIB_DIR}/libopenblas.so
-	#${opencv_ml}
-	#${opencv_core}
-	#${opencv_imgproc}
-	#${opencv_highgui}
-	#${opencv_imgcodecs}
-	#${opencv_video}
-	#${opencv_videoio}
-	#${opencv_objdetect}
 	pthread
 	rt # undefined reference to shm_open
+	${opencv_core}
+	${opencv_imgproc}
+	${opencv_highgui}
+	${opencv_imgcodecs}
+	${opencv_video}
+	${opencv_videoio}
+	${opencv_objdetect}
+	${opencv_ml}
 )
 

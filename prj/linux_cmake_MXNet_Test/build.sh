@@ -1,10 +1,5 @@
 #! /bin/bash
 
-# steps:
-# 1. run ./build.sh generate libopenblas.so and libmxnet.so dynamic library
-# 2. cp libopenblas.so and libmxnet.so to mxnet/cpp-package/scripts/ directory
-# 3. run "python3 OpWrapperGenerator.py libmxnet.dll" in mxnet/cpp-package/scripts/ directory, which generate op.h file
-
 real_path=$(realpath $0)
 dir_name=`dirname "${real_path}"`
 echo "real_path: ${real_path}, dir_name: ${dir_name}"
