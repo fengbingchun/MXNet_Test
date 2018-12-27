@@ -21,6 +21,7 @@ set(OpenBLAS_LIBNAME openblas)
 if(MSVC)
 option(BUILD_WITHOUT_LAPACK "Without LAPACK and LAPACKE (Only BLAS or CBLAS)" ON)
 endif()
+option(BUILD_WITHOUT_LAPACK "Without LAPACK and LAPACKE (Only BLAS or CBLAS)" ON) # fengbingchun modify
 option(BUILD_WITHOUT_CBLAS "Without CBLAS" OFF)
 option(DYNAMIC_ARCH "Build with DYNAMIC_ARCH" OFF)
 option(DYNAMIC_OLDER "Support older cpus with DYNAMIC_ARCH" OFF)

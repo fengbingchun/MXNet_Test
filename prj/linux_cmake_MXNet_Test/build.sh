@@ -39,21 +39,6 @@ ln -s ${openblas_path}/build/lib/libopenblas* ${new_dir_name}
 echo "========== finish build openblas =========="
 
 cd -
-# build dmlc-core
-echo "========== start build dmlc-core =========="
-dmlc_path=${dir_name}/../../src/dmlc-core
-if [ -f ${dmlc_path}/build/libdmlc.a ]; then
-	echo "dmlc static library already exists without recompiling"
-else
-	mkdir -p ${dmlc_path}/build
-	cd ${dmlc_path}/build
-	cmake ..
-	make
-fi
-
-ln -s ${dmlc_path}/build/libdmlc.a ${new_dir_name}
-echo "========== finish build dmlc-core =========="
-
 rc=$?
 if [[ ${rc} != 0 ]]; then
 	echo "########## Error: some of thess commands have errors above, please check"
@@ -66,4 +51,49 @@ cmake ..
 make
 
 cd -
+# use all *.o files include openblas and mxnet to generate mxnet dynamic library
+# Note: need to modify mxnet_home_dir value in different machines
+mxnet_home_dir=/home/likewise-open/xxxx/fengbc/Other/MXNet_Test/src
+g++ -shared -o ${dir_name}/libmxnet.so ${openblas_path}/build/driver/others/CMakeFiles/driver_others.dir/*.c.o \
+					${openblas_path}/build/driver/level2/CMakeFiles/driver_level2.dir/CMakeFiles/*.c.o \
+					${openblas_path}/build/driver/level3/CMakeFiles/driver_level3.dir/CMakeFiles/*.c.o \
+					${openblas_path}/build/kernel/CMakeFiles/kernel.dir/CMakeFiles/*.c.o \
+					${openblas_path}/build/interface/CMakeFiles/interface.dir/CMakeFiles/*.c.o \
+					${openblas_path}/build/kernel/CMakeFiles/kernel.dir/CMakeFiles/*.S.o \
+					${dir_name}/build/CMakeFiles/mxnet.dir${mxnet_home_dir}/mxnet/src/storage/*.cc.o \
+					${dir_name}/build/CMakeFiles/mxnet.dir${mxnet_home_dir}/mxnet/src/executor/*.cc.o \
+					${dir_name}/build/CMakeFiles/mxnet.dir${mxnet_home_dir}/mxnet/src/profiler/*.cc.o \
+					${dir_name}/build/CMakeFiles/mxnet.dir${mxnet_home_dir}/mxnet/src/*.cc.o \
+					${dir_name}/build/CMakeFiles/mxnet.dir${mxnet_home_dir}/mxnet/src/engine/*.cc.o \
+					${dir_name}/build/CMakeFiles/mxnet.dir${mxnet_home_dir}/mxnet/src/nnvm/*.cc.o \
+					${dir_name}/build/CMakeFiles/mxnet.dir${mxnet_home_dir}/mxnet/src/kvstore/*.cc.o \
+					${dir_name}/build/CMakeFiles/mxnet.dir${mxnet_home_dir}/mxnet/src/common/*.cc.o \
+					${dir_name}/build/CMakeFiles/mxnet.dir${mxnet_home_dir}/mxnet/src/ndarray/*.cc.o \
+					${dir_name}/build/CMakeFiles/mxnet.dir${mxnet_home_dir}/mxnet/src/io/*.cc.o \
+					${dir_name}/build/CMakeFiles/mxnet.dir${mxnet_home_dir}/mxnet/src/operator/*.cc.o \
+					${dir_name}/build/CMakeFiles/mxnet.dir${mxnet_home_dir}/mxnet/src/operator/quantization/*.cc.o \
+					${dir_name}/build/CMakeFiles/mxnet.dir${mxnet_home_dir}/mxnet/src/operator/quantization/mkldnn/*.cc.o \
+					${dir_name}/build/CMakeFiles/mxnet.dir${mxnet_home_dir}/mxnet/src/operator/nnpack/*.cc.o \
+					${dir_name}/build/CMakeFiles/mxnet.dir${mxnet_home_dir}/mxnet/src/operator/contrib/*.cc.o \
+					${dir_name}/build/CMakeFiles/mxnet.dir${mxnet_home_dir}/mxnet/src/operator/random/*.cc.o \
+					${dir_name}/build/CMakeFiles/mxnet.dir${mxnet_home_dir}/mxnet/src/operator/nn/*.cc.o \
+					${dir_name}/build/CMakeFiles/mxnet.dir${mxnet_home_dir}/mxnet/src/operator/nn/cudnn/*.cc.o \
+					${dir_name}/build/CMakeFiles/mxnet.dir${mxnet_home_dir}/mxnet/src/operator/nn/mkldnn/*.cc.o \
+					${dir_name}/build/CMakeFiles/mxnet.dir${mxnet_home_dir}/mxnet/src/operator/tensor/*.cc.o \
+					${dir_name}/build/CMakeFiles/mxnet.dir${mxnet_home_dir}/mxnet/src/operator/custom/*.cc.o \
+					${dir_name}/build/CMakeFiles/mxnet.dir${mxnet_home_dir}/mxnet/src/imperative/*.cc.o \
+					${dir_name}/build/CMakeFiles/mxnet.dir${mxnet_home_dir}/mxnet/src/c_api/*.cc.o \
+					${dir_name}/build/CMakeFiles/mxnet.dir${mxnet_home_dir}/tvm/nnvm/src/core/*.cc.o \
+					${dir_name}/build/CMakeFiles/mxnet.dir${mxnet_home_dir}/tvm/nnvm/src/pass/*.cc.o \
+					${dir_name}/build/CMakeFiles/mxnet.dir${mxnet_home_dir}/tvm/nnvm/src/c_api/*.cc.o \
+					${dir_name}/build/CMakeFiles/mxnet.dir${mxnet_home_dir}/dmlc-core/src/*.cc.o \
+					${dir_name}/build/CMakeFiles/mxnet.dir${mxnet_home_dir}/dmlc-core/src/io/*.cc.o \
+					-lrt 
 
+mxnet_python_dir=${dir_name}/../../src/mxnet/python
+#echo "mxnet python dir: ${mxnet_python_dir}"
+cp libmxnet.so ${mxnet_python_dir}
+cd ${mxnet_python_dir}
+python3 setup.py install --user
+
+cd -

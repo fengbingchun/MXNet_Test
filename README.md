@@ -9,9 +9,10 @@
 	- dmlc-core: 0.3, [GitHub](https://github.com/dmlc/dmlc-core/releases)
 	- tvm: 0.4, [GitHub](https://github.com/dmlc/tvm/releases)
 - test code include:
-	- C++
+	- C++(windows and linux)
 		- MXNet's third library usage: dmlc-core、OpenBLAS、mshadow
 		- MNIST train
+	- python(windows and linux)
 
 **The project support platform:** 
 - windows10 64 bits: It can be directly build with VS2017 in windows10 64bits.

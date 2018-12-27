@@ -63,15 +63,28 @@ FILE(GLOB_RECURSE SRC_TVM_NNVM_C_API ${PATH_SRC_TVM_FILES}/nnvm/src/c_api/*.cc)
 FILE(GLOB_RECURSE SRC_TVM_NNVM_CORE ${PATH_SRC_TVM_FILES}/nnvm/src/core/*.cc)
 FILE(GLOB_RECURSE SRC_TVM_NNVM_PASS ${PATH_SRC_TVM_FILES}/nnvm/src/pass/*.cc)
 
+# mxnet
 FILE(GLOB_RECURSE SRC_MXNET ${PATH_SRC_MXNET_FILES}/src/*.cc)
+
+# dmlc
+FILE(GLOB SRC_DMLC ${PATH_SRC_DMLC_FILES}/src/*.cc)
+FILE(GLOB_RECURSE SRC_DMLC_INCLUDE ${PATH_SRC_DMLC_FILES}/include/*)
+LIST(APPEND SRC_DMLC ${SRC_DMLC_INCLUDE})
+LIST(APPEND SRC_DMLC ${PATH_SRC_DMLC_FILES}/src/io/line_split.cc)
+LIST(APPEND SRC_DMLC ${PATH_SRC_DMLC_FILES}/src/io/recordio_split.cc)
+LIST(APPEND SRC_DMLC ${PATH_SRC_DMLC_FILES}/src/io/indexed_recordio_split.cc)
+LIST(APPEND SRC_DMLC ${PATH_SRC_DMLC_FILES}/src/io/input_split_base.cc)
+LIST(APPEND SRC_DMLC ${PATH_SRC_DMLC_FILES}/src/io/filesys.cc)
+LIST(APPEND SRC_DMLC ${PATH_SRC_DMLC_FILES}/src/io/local_filesys.cc)
 
 LIST(APPEND MXNET_SRC_LIST
 	${SRC_TVM_NNVM_C_API}
 	${SRC_TVM_NNVM_CORE}
 	${SRC_TVM_NNVM_PASS}
 	${SRC_MXNET}
+	${SRC_DMLC}
 )
-#MESSAGE(STATUS "mxnet src: ${MXNET_SRC_LIST}")
+#MESSAGE(STATUS "###### src: ${MXNET_SRC_LIST}")
 
 ADD_LIBRARY(mxnet SHARED ${MXNET_SRC_LIST})
 
@@ -84,14 +97,14 @@ FIND_LIBRARY(opencv_video NAMES opencv_video PATHS ${PATH_OPENCV}/lib NO_DEFAULT
 FIND_LIBRARY(opencv_videoio NAMES opencv_videoio PATHS ${PATH_OPENCV}/lib NO_DEFAULT_PATH)
 FIND_LIBRARY(opencv_objdetect NAMES opencv_objdetect PATHS ${PATH_OPENCV}/lib NO_DEFAULT_PATH)
 FIND_LIBRARY(opencv_ml NAMES opencv_ml PATHS ${PATH_OPENCV}/lib NO_DEFAULT_PATH)
-MESSAGE(STATUS "opencv libraries: ${opencv_core} ${opencv_imgproc} ${opencv_highgui} ${opencv_imgcodecs} ${opencv_video}" ${opencv_videoio} ${opencv_objdetect} ${opencv_ml})
+MESSAGE(STATUS "opencv libraries: ${opencv_core} ${opencv_imgproc} ${opencv_highgui} ${opencv_imgcodecs} ${opencv_video} ${opencv_videoio} ${opencv_objdetect} ${opencv_ml}")
 
 # find dep library
 SET(DEP_LIB_DIR ${CMAKE_CURRENT_SOURCE_DIR}/build CACHE PATH "dep library path")
 MESSAGE(STATUS "dep library dir: ${DEP_LIB_DIR}")
 LINK_DIRECTORIES(${DEP_LIB_DIR})
 
-# recursive query match files :*.cpp
+# recursive query match files :*.cpp, *.cc
 FILE(GLOB_RECURSE TEST_CPP_LIST ${PATH_TEST_FILES}/*.cpp)
 FILE(GLOB_RECURSE TEST_CC_LIST ${PATH_TEST_FILES}/*.cc)
 MESSAGE(STATUS "test cpp list: ${TEST_CPP_LIST} ${TEST_C_LIST}")
@@ -101,10 +114,9 @@ ADD_EXECUTABLE(MXNet_Test ${TEST_CPP_LIST} ${TEST_CC_LIST})
 # add dependent library: static and dynamic
 TARGET_LINK_LIBRARIES(MXNet_Test
 	mxnet
-	${DEP_LIB_DIR}/libdmlc.a
 	${DEP_LIB_DIR}/libopenblas.so
 	pthread
-	rt # undefined reference to shm_open
+	rt # undefined reference to shm_open, need to be placed in front of opencv library
 	${opencv_core}
 	${opencv_imgproc}
 	${opencv_highgui}
