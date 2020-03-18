@@ -230,7 +230,7 @@
     <ProjectGuid>{E183458C-2B1C-48DC-BDA5-60C03418E304}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>libmxnet</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
@@ -284,7 +284,7 @@
       <AssemblerListingLocation>.\../../../obj/rel/x64/libmxnet\</AssemblerListingLocation>
       <ObjectFileName>.\../../../obj/rel/x64/libmxnet\</ObjectFileName>
       <ProgramDataBaseFileName>.\../../../obj/rel/x64/libmxnet\</ProgramDataBaseFileName>
-      <AdditionalIncludeDirectories>E:\GitCode\MXNet_Test\src\mxnet\include;E:\GitCode\MXNet_Test\src\mxnet\src;E:\GitCode\MXNet_Test\src\mshadow;E:\GitCode\MXNet_Test\src\tvm\include;E:\GitCode\MXNet_Test\src\tvm\nnvm\include;E:\GitCode\MXNet_Test\src\dmlc-core\include;E:\GitCode\MXNet_Test\src\dlpack\include;E:\GitCode\MXNet_Test\src\openblas;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>E:\GitCode\MXNet_Test\src\mxnet\include;E:\GitCode\MXNet_Test\src\mxnet\src;E:\GitCode\MXNet_Test\src\mshadow;E:\GitCode\MXNet_Test\src\tvm\include;E:\GitCode\MXNet_Test\src\tvm\nnvm\include;E:\GitCode\MXNet_Test\src\dmlc-core\include;E:\GitCode\MXNet_Test\src\dlpack\include;E:\GitCode\MXNet_Test\src\openblas;E:\GitCode\MXNet_Test\prj\x86_x64\libopenblas;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
@@ -317,7 +317,7 @@
       <AssemblerListingLocation>.\../../../obj/dbg/x64/libmxnet\</AssemblerListingLocation>
       <ObjectFileName>.\../../../obj/dbg/x64/libmxnet\</ObjectFileName>
       <ProgramDataBaseFileName>.\../../../obj/dbg/x64/libmxnet\</ProgramDataBaseFileName>
-      <AdditionalIncludeDirectories>E:\GitCode\MXNet_Test\src\mxnet\include;E:\GitCode\MXNet_Test\src\mxnet\src;E:\GitCode\MXNet_Test\src\mshadow;E:\GitCode\MXNet_Test\src\tvm\include;E:\GitCode\MXNet_Test\src\tvm\nnvm\include;E:\GitCode\MXNet_Test\src\dmlc-core\include;E:\GitCode\MXNet_Test\src\dlpack\include;E:\GitCode\MXNet_Test\src\openblas;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>E:\GitCode\MXNet_Test\src\mxnet\include;E:\GitCode\MXNet_Test\src\mxnet\src;E:\GitCode\MXNet_Test\src\mshadow;E:\GitCode\MXNet_Test\src\tvm\include;E:\GitCode\MXNet_Test\src\tvm\nnvm\include;E:\GitCode\MXNet_Test\src\dmlc-core\include;E:\GitCode\MXNet_Test\src\dlpack\include;E:\GitCode\MXNet_Test\src\openblas;E:\GitCode\MXNet_Test\prj\x86_x64\libopenblas;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>

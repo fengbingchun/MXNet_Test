@@ -15,7 +15,7 @@
 	- python(windows and linux)
 
 **The project support platform:** 
-- windows10 64 bits: It can be directly build with VS2017 in windows10 64bits.
+- windows7/10 64 bits: It can be directly build with VS2017 in windows7/10 64bits.
 - Linux 
 	- ThirdPartyLibrary_Test support cmake build(file position: prj/linux_cmake_ThirdPartyLibrary_Test)
 	- MXNet_Test support cmake build(file position: prj/linux_cmake_MXNet_Test)
